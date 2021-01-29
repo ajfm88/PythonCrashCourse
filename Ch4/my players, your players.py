@@ -11,5 +11,3 @@ for players in my_players:
 print("\nMy friend's team's players are:")
 for players in friends_players:
       print(f"- {players}")
-
-print("test")
