@@ -6,7 +6,7 @@
 def make_album(artist_name, album_title, tracks=0):
     """Return a dictionary of information about an album"""
     album = {
-        'artist': artist_name.title(), 
+        'artist': artist_name.title(),
         'album': album_title.title(),
         }
     if tracks:
@@ -30,3 +30,5 @@ while True:
 
     album_and_artist = make_album(art_name, alb_name)
     print(f"\n The artist and the album name are: {album_and_artist}.")
+
+print("Thank you for participating!")
