@@ -1,0 +1,5 @@
+I have learned about variables.
+I have learned about functions.
+I have learned about classes.
+I have learned about methods.
+I have learned about if else statements.
