@@ -17,9 +17,17 @@ class AlienInvasion:
     def __init__(self):
         """Initialize the game, and create game resources."""
         pygame.init()
+        self.settings = Settings()
+        #We import Settings into the main program file. Then we create an
+        #instance of Settings and assign it to self.settings
 
-#we call pygame.display.set_mode() to create a display window, 
-# on which we’ll draw all the game’s graphical ele­ments.
+        self.screen = pygame.display.set_mode(
+            (self.settings.screen_Width, self.settings.screen_height))
+        #When we create a screen, we use the screen_width and
+        #screen_height attributes of self.settings, 
+
+        #we call pygame.display.set_mode() to create a display window, 
+        # on which we’ll draw all the game’s graphical ele­ments.
 
         self.screen = pygame.display.set_mode((1200, 800))
         pygame.display.set_caption("Alien Invasion")
@@ -58,10 +66,10 @@ class AlienInvasion:
 #and we call sys.exit() to exit the game 
 
             #Redraw the screen during each pass through the loop.
-            self.screen.fill(self.bg_color)
-
-#we fill the screen with the background color using the fill()method, 
-#which acts on a surface and takes only one argument: a color.
+            self.screen.fill(self.settings.bg_color)
+            #we fill the screen with the background color using the fill()method, 
+            #which acts on a surface and takes only one argument: a color.
+            #WE use self.settings to access the background color when filling the screen
 
             #Make the most recently drawn screen visible.
             pygame.display.flip()
