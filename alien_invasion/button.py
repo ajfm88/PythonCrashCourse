@@ -23,10 +23,10 @@ class Button:
     def _prep_msg(self,msg):
         """Turn msg into a rendered image and center text on the button."""
         self.msg_image = self.font.render(msg, True, self.text_color, self.button_color)
-        self.meg_image_rect = self.msg_image.get.rect()
+        self.msg_image_rect = self.msg_image.get_rect()
         self.msg_image_rect.center = self.rect.center
 
     def draw_button(self):
         # Draw blank button and then draw message.
         self.screen.fill(self.button_color, self.rect)
-        self.screen.blut(self.msg_image, self.msg_image_rect)
+        self.screen.blit(self.msg_image, self.msg_image_rect)
